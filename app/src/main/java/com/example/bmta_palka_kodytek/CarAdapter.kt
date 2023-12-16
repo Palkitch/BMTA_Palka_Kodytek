@@ -1,4 +1,3 @@
-// Soubor: AutoAdapter.kt
 package com.example.bmta_palka_kodytek.objects
 
 import android.view.LayoutInflater
@@ -8,10 +7,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bmta_palka_kodytek.R
 
-class AutoAdapter(private val autos: List<Auto>) :
-    RecyclerView.Adapter<AutoAdapter.AutoViewHolder>() {
+class CarAdapter(private val cars: List<Car>) :
+    RecyclerView.Adapter<CarAdapter.CarViewHolder>() {
     interface OnItemClickListener {
-        fun onItemClick(auto: Auto)
+        fun onItemClick(car: Car)
     }
 
     private var itemClickListener: OnItemClickListener? = null
@@ -20,32 +19,32 @@ class AutoAdapter(private val autos: List<Auto>) :
         itemClickListener = listener
     }
 
-    class AutoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class CarViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewBrand: TextView = itemView.findViewById(R.id.textViewBrand)
         val textViewModel: TextView = itemView.findViewById(R.id.textViewModel)
         val textViewSeats: TextView = itemView.findViewById(R.id.textViewSeats)
         val textViewConsumption: TextView = itemView.findViewById(R.id.textViewConsumption)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AutoViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_auto, parent, false)
-        return AutoViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_car, parent, false)
+        return CarViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: AutoViewHolder, position: Int) {
-        val auto = autos[position]
-        holder.textViewBrand.text = auto.brand
-        holder.textViewModel.text = auto.model
-        holder.textViewSeats.text = auto.seats.toString()
-        holder.textViewConsumption.text = auto.consumption
+    override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
+        val car = cars[position]
+        holder.textViewBrand.text = car.brand
+        holder.textViewModel.text = car.model
+        holder.textViewSeats.text = car.seats.toString()
+        holder.textViewConsumption.text = car.consumption
 
         holder.itemView.setOnClickListener {
-            itemClickListener?.onItemClick(auto)
+            itemClickListener?.onItemClick(car)
         }
     }
 
 
     override fun getItemCount(): Int {
-        return autos.size
+        return cars.size
     }
 }
