@@ -1,11 +1,12 @@
 package com.example.bmta_palka_kodytek
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NavUtils
 import androidx.fragment.app.FragmentTransaction
+import com.example.bmta_palka_kodytek.recycler_view.CarListFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var buttonCars: Button
     private lateinit var buttonExit: Button
     private lateinit var carListFragment: CarListFragment
+    private var btnBackToMain: Button? = null
 
     /*
     *   TODO:
@@ -29,17 +31,20 @@ class MainActivity : AppCompatActivity() {
         buttonCars = findViewById(R.id.buttonCars)
         buttonExit = findViewById(R.id.buttonExit)
 
-        buttonCalculate.setOnClickListener {
+        btnBackToMain = carListFragment.view?.findViewById(R.id.btnBackToMain)
+        btnBackToMain?.setOnClickListener {
+            supportFragmentManager.popBackStack()
+            onOptionsItemSelected(findViewById(android.R.id.home))
+        }
 
+        buttonCalculate.setOnClickListener {
         }
 
         buttonCars.setOnClickListener {
-            buttonCalculate.visibility = Button.GONE
-            buttonCars.visibility = Button.GONE
-            buttonExit.visibility = Button.GONE
+            showButtons(false)
 
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, CarListFragment())
+                .replace(R.id.container, carListFragment)
                 .addToBackStack(null)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit()
@@ -56,31 +61,34 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             android.R.id.home -> {
                 if (supportFragmentManager.findFragmentById(R.id.container) != carListFragment) {
-                    // Skryj tlačítka
-                    buttonCalculate.visibility = Button.GONE
-                    buttonCars.visibility = Button.GONE
-                    buttonExit.visibility = Button.GONE
+                    showButtons(false)
 
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.container, carListFragment)
                         .addToBackStack(null)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
-
-                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
                 } else {
-                    // Zobraz tlačítka a skryj tlačítko zpět
-                    buttonCalculate.visibility = Button.VISIBLE
-                    buttonCars.visibility = Button.VISIBLE
-                    buttonExit.visibility = Button.VISIBLE
-                    supportActionBar?.setDisplayHomeAsUpEnabled(false)
-
+                    showButtons(true)
                     supportFragmentManager.popBackStack()
                 }
                 return true
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    fun showButtons(switch: Boolean) {
+        if (switch) {
+            buttonCalculate.visibility = Button.VISIBLE
+            buttonCars.visibility = Button.VISIBLE
+            buttonExit.visibility = Button.VISIBLE
+        } else {
+            buttonCalculate.visibility = Button.GONE
+            buttonCars.visibility = Button.GONE
+            buttonExit.visibility = Button.GONE
+        }
+
     }
 
 }

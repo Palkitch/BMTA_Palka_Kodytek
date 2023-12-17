@@ -1,4 +1,3 @@
-// Soubor: Auto.kt
 package com.example.bmta_palka_kodytek.objects
 
 class Car {

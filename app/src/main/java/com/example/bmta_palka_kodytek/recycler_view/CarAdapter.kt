@@ -1,4 +1,4 @@
-package com.example.bmta_palka_kodytek.objects
+package com.example.bmta_palka_kodytek.recycler_view
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,9 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bmta_palka_kodytek.R
+import com.example.bmta_palka_kodytek.objects.Car
 
 class CarAdapter(private val cars: List<Car>) :
     RecyclerView.Adapter<CarAdapter.CarViewHolder>() {
+
     interface OnItemClickListener {
         fun onItemClick(car: Car)
     }
@@ -43,8 +45,9 @@ class CarAdapter(private val cars: List<Car>) :
         }
     }
 
-
     override fun getItemCount(): Int {
         return cars.size
     }
+
+
 }
