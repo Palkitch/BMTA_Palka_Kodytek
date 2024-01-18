@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textViewBrand"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:id="@+id/brandTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Značka" />
+        android:textSize="18sp"/>
 
     <TextView
-        android:id="@+id/textViewModel"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:id="@+id/modelTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Typ" />
+        android:textSize="16sp"/>
 
     <TextView
-        android:id="@+id/textViewSeats"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:id="@+id/seatsTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Počet míst" />
+        android:textSize="16sp"/>
 
     <TextView
-        android:id="@+id/textViewConsumption"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:id="@+id/consumptionTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spotřeba" />
-
+        android:textSize="16sp"/>
 </LinearLayout>
