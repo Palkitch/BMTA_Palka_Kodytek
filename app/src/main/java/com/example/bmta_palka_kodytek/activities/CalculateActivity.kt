@@ -42,7 +42,7 @@ class CalculateActivity : AppCompatActivity() {
             binding.brandTextView.text = "Značka: ${selectedCar!!.brand}"
             binding.modelTextView.text = "Model: ${selectedCar!!.model}"
             binding.seatsTextView.text = "Počet sedadel: ${selectedCar!!.seats}"
-            binding.consumptionTextView.text = "Spotřeba: ${selectedCar!!.consumption}"
+            binding.consumptionTextView.text = "Spotřeba: ${selectedCar!!.consumption}l/100Km"
         } else {
             binding.tvHint.visibility = View.VISIBLE  // zviditelníme nápovědu
         }

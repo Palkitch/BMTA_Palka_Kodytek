@@ -33,7 +33,7 @@ class CarAdapter(private val carList: List<Car>, private val onClick: (Car) -> U
         holder.brandTextView.text = "Značka: ${currentCar.brand}"
         holder.modelTextView.text = "Model: ${currentCar.model}"
         holder.seatsTextView.text = "Počet sedadel: ${currentCar.seats}"
-        holder.consumptionTextView.text = "Spotřeba: ${currentCar.consumption}"
+        holder.consumptionTextView.text = "Spotřeba: ${currentCar.consumption}l/100Km"
 
         holder.itemView.setOnClickListener {
             onClick.invoke(currentCar)
