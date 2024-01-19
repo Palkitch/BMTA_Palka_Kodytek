@@ -10,7 +10,7 @@
         android:id="@+id/textCustomersCount"
         android:layout_width="370dp"
         android:layout_height="48dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Počet vezených zákazníků"
         android:inputType="text"
@@ -52,6 +52,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint='Běžte zpět do sekce "vozidla" a na nějaké klikněte' />
     </LinearLayout>
 
     <Button
@@ -81,18 +88,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:text="Vybraný automobil:"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvHint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint='Pro vybrání auta běžte do sekce "vozidla" a na nějaké klikněte'
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
         android:id="@+id/textKm"
@@ -112,7 +110,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Vaše sazba za hodinu (kč)"
+        android:hint="Vaše sazba za kilometr(kč)"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

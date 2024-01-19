@@ -1,8 +1,8 @@
 package com.example.bmta_palka_kodytek.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bmta_palka_kodytek.adapter.CarAdapter
 import com.example.bmta_palka_kodytek.databinding.ActivityCarsPresetsBinding
@@ -21,6 +21,7 @@ class CarsPresetsActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
+        // sekce pro vytvoření nového automobilu
         binding.carsCreateNew.setOnClickListener {
             startActivity(Intent(this, CreateCarActivity::class.java))
         }
@@ -33,13 +34,13 @@ class CarsPresetsActivity : AppCompatActivity() {
             brand = "Toyota"
             model = "Camry"
             seats = 5
-            consumption = "8.5 L/100km"
+            consumption = 8.5
         })
         carList.add(Car().apply {
             brand = "Honda"
             model = "Civic"
             seats = 5
-            consumption = "7.2 L/100km"
+            consumption = 7.2
         })
 
         // Vytvoření adaptéru s anonymní funkcí jako parametrem pro CarAdapter konstruktor, tahle funkce
