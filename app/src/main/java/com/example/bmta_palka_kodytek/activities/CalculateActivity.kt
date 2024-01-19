@@ -33,9 +33,8 @@ class CalculateActivity : AppCompatActivity() {
             val model = selectedCar.model
             val seats = selectedCar.seats
             val consumption = selectedCar.consumption
-            binding.testTv.text = "$brand, $model, $seats, $consumption"
         } else {
-            binding.testTv.text = "Vybrané auto je null";
+
         }
     }
 }

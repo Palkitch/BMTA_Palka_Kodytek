@@ -27,13 +27,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textConsumption" />
 
     <EditText
-        android:id="@+id/textBrand"
+        android:id="@+id/textCustomersCount"
         android:layout_width="370dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Značka"
         android:inputType="text"
-        android:text="Značka"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,11 +44,11 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Model"
         android:inputType="text"
-        android:text="Model"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBrand" />
+        app:layout_constraintTop_toBottomOf="@+id/textCustomersCount" />
 
     <EditText
         android:id="@+id/textSeats"
@@ -56,8 +56,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Počet sedadel"
         android:inputType="text"
-        android:text="Počet sedadel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textModel" />
@@ -68,8 +68,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Spotřeba (l/100km)"
         android:inputType="text"
-        android:text="Spotřeba (l/100km)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textSeats" />
