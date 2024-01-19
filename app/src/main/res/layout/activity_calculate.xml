@@ -21,7 +21,7 @@
             android:id="@+id/brandTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/modelTextView"
@@ -46,8 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint='@string/textCalculateHint'
-            android:textColorHint="#546E7A" />
+            android:hint='@string/textCalculateHint'/>
     </LinearLayout>
 
     <Button
@@ -91,9 +90,7 @@
         android:ems="10"
         android:hint="@string/textCustomersCountHint"
         android:inputType="text"
-        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -106,7 +103,6 @@
         android:ems="10"
         android:hint="@string/textKmHint"
         android:inputType="text"
-        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCustomersCount" />
@@ -120,7 +116,6 @@
         android:ems="10"
         android:hint="@string/textSalaryHint"
         android:inputType="text"
-        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textKm" />
@@ -134,7 +129,6 @@
         android:hint="@string/textResultHint"
         android:paddingStart="5dp"
         android:paddingEnd="0dp"
-        android:textColorHint="#546E7A"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

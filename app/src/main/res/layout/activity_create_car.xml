@@ -34,7 +34,6 @@
         android:ems="10"
         android:hint="@string/textBrand"
         android:inputType="text"
-        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,7 +47,6 @@
         android:ems="10"
         android:hint="@string/textModel"
         android:inputType="text"
-        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCustomersCount"
@@ -63,10 +61,10 @@
         android:ems="10"
         android:hint="@string/textSeats"
         android:inputType="text"
-        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textModel" />
+        app:layout_constraintTop_toBottomOf="@+id/textModel"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/textConsumption"
@@ -77,9 +75,9 @@
         android:ems="10"
         android:hint="@string/textConsumption"
         android:inputType="text"
-        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSeats" />
+        app:layout_constraintTop_toBottomOf="@+id/textSeats"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
