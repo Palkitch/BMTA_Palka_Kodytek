@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:text="Zpět"
+        android:text="@string/btnBackToMainText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textConsumption" />
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Vytvořit"
+        android:text="@string/btnCreateCarText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textConsumption" />
 
@@ -32,11 +32,13 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Značka"
+        android:hint="@string/textBrand"
         android:inputType="text"
+        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/textModel"
@@ -44,20 +46,24 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Model"
+        android:hint="@string/textModel"
         android:inputType="text"
+        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCustomersCount" />
+        app:layout_constraintTop_toBottomOf="@+id/textCustomersCount"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/textSeats"
         android:layout_width="370dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Počet sedadel"
+        android:hint="@string/textSeats"
         android:inputType="text"
+        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textModel" />
@@ -67,9 +73,11 @@
         android:layout_width="370dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Spotřeba (l/100km)"
+        android:hint="@string/textConsumption"
         android:inputType="text"
+        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textSeats" />

@@ -42,6 +42,12 @@ class CarsPresetsActivity : AppCompatActivity() {
             seats = 5
             consumption = 7.2
         })
+        carList.add(Car().apply {
+            brand = "Ford"
+            model = "Focus"
+            seats = 5
+            consumption = 6.4
+        })
 
         // Vytvoření adaptéru s anonymní funkcí jako parametrem pro CarAdapter konstruktor, tahle funkce
         // bude definovat akorát předání vybraného itemu z recycler view (Car) další aktivitě, a to CalculateActivity

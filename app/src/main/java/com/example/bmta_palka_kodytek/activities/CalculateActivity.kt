@@ -19,7 +19,7 @@ class CalculateActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")    // potlačení "string joinů"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCalculateBinding.inflate(layoutInflater);
+        binding = ActivityCalculateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // zpatky na main page

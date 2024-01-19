@@ -1,7 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BMTA_Palka_Kodytek</string>
-    <string name="btnBackToMainText">Zpět</string>
     <string name="btnCountText">Spočítat</string>
+    <string name="btnBackToMainText">Zpět</string>
     <string name="textCustomersCountHint">Počet vezených zákazníků</string>
     <string name="textHeader">Taxametr</string>
     <string name="mainBtnCountText">Výpočet ceny</string>

@@ -1,10 +1,8 @@
 package com.example.bmta_palka_kodytek.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.bmta_palka_kodytek.R
-import com.example.bmta_palka_kodytek.databinding.ActivityCarsPresetsBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.bmta_palka_kodytek.databinding.ActivityCreateCarBinding
 
 class CreateCarActivity : AppCompatActivity() {
@@ -15,9 +13,10 @@ class CreateCarActivity : AppCompatActivity() {
         binding = ActivityCreateCarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // vytvoří nové auto, uloží do JSON a refreshne aktivitu CarsPresets
+        // vytvoří nové auto, uloží do JSON a refreshne aktivitu CarsPresets, aby se tam nově vložené auto zobrazovalo
         binding.createCarBtn.setOnClickListener {
             // TODO odeslat nově vytvořené auto do JSONU a znovu je načist v cars preset
+            // zahrnout zde i kontrolu vstupů
         }
 
         // zpatky na Cars presets
