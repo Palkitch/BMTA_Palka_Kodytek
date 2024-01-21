@@ -1,5 +1,6 @@
 package com.example.bmta_palka_kodytek.activities
 
+import JsonHandler
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -26,28 +27,10 @@ class CarsPresetsActivity : AppCompatActivity() {
             startActivity(Intent(this, CreateCarActivity::class.java))
         }
 
-        // TODO: zde udělej nějakou instanci toho sveho JSON loaderu a naplň tím ten list
-        val carList = mutableListOf<Car>()
-
-        // Přidejte auta do seznamu
-        carList.add(Car().apply {
-            brand = "Toyota"
-            model = "Camry"
-            seats = 5
-            consumption = 8.5
-        })
-        carList.add(Car().apply {
-            brand = "Honda"
-            model = "Civic"
-            seats = 5
-            consumption = 7.2
-        })
-        carList.add(Car().apply {
-            brand = "Ford"
-            model = "Focus"
-            seats = 5
-            consumption = 6.4
-        })
+        // Vytvoření instance JsonHandler
+        val jsonHandler = JsonHandler(this)
+        // Čtení aut ze souboru cars.json (soubor se nachází v telefonu)
+        val carList = jsonHandler.readCars()
 
         // Vytvoření adaptéru s anonymní funkcí jako parametrem pro CarAdapter konstruktor, tahle funkce
         // bude definovat akorát předání vybraného itemu z recycler view (Car) další aktivitě, a to CalculateActivity
